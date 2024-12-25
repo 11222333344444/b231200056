@@ -1,0 +1,12 @@
+[Unit]
+Description=BSM Directory Monitor Service
+After=network.target
+
+[Service]
+User=yakup
+WorkingDirectory=/home/yakup/bsm
+ExecStart=/usr/bin/python3 /home/yakup/bsm/monitor.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
